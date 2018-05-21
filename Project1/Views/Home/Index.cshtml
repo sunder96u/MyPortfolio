@@ -1,7 +1,6 @@
 ﻿@{
-        Layout = null;
-    }
-
+    Layout = null;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +21,8 @@
     <link href="~/Template1/css/animate.css" rel="stylesheet">
     <link href="~/Template1/css/owl.carousel.css" rel="stylesheet">
     <link href="~/Template1/css/owl.theme.css" rel="stylesheet">
+    <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" />
+    <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" />
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
@@ -384,7 +385,7 @@
                                 <figure>
                                     <div class="hovereffect">
                                         <img class="img-responsive" src="~/Template1/images/JavaScript.jpg" alt="">
-                                        <a href="~/JSModal.html" class="js-modal">
+                                        <a @*href="~/JSModal.html"*@ class="js-modal">
                                             <div class="overlay">
                                                 <div class="hovereffect-title">
                                                     <h6>JavaScript Exercises</h6>
@@ -643,12 +644,10 @@
                 <footer>
                     <div class="container">
                         <p class="footer-info">
-                            © 2016 - <strong>MyWork</strong> - Bootstrap Resume Template.
+                            © 2018 - <strong>My Portfolio</strong> - Steven Underwood.
                             <span class="social pull-right">
-                                <a href="https://www.badgerbadgerbadger.com"><i class="fa fa-facebook"></i></a>
-                                <a href="https://www.badgerbadgerbadger.com"><i class="fa fa-twitter"></i></a>
                                 <a href="https://www.google.com"><i class="fa fa-google-plus"></i></a>
-                                <a href="https://www.badgerbadgerbadger.com"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/steven-underwood-3b0137162"><i class="fa fa-linkedin"></i></a>
                             </span>
                         </p>
                     </div><!-- / container -->
@@ -671,6 +670,9 @@
     <script src="~/Template1/js/jquery.min.js"></script>
     <script src="~/Template1/js/bootstrap.min.js"></script>
     <script src="~/Template1/js/jquery.easing.min.js"></script>
+
+    <script src="~/Scripts/JSExercise.js"></script>
+
     <!-- menu toggle script -->
     <script>
         $("#menu-toggle").click(function (e) {
@@ -722,14 +724,48 @@
     <!-- / posts carousel -->
     <!-- hide nav -->
     <script src="~/Template1/js/hide-nav.js"></script>
+
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+
     <!-- / hide nav -->
     <!-- / javascript -->
+    @*<script>
+            $('.js-modal').on('click', function (e) {
+                e.preventDefault();
+                $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
+            });
+        </script>*@
+
+    @*<script>
+            $(".js-modal").click(function () {
+                $(".modal-content").load("../JSModal.html", function (content) {
+                    $(".modal-content").html(content);
+                    $("#myModal").modal('show');
+                })
+            })
+        </script>*@
     <script>
-        $('.js-modal').on('click', function (e) {
-            e.preventDefault();
-            $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
+        $(".js-modal").click(function () {
+            $(".modal-content").load("../JSModal.html", function (responseTxt, statusTxt, xhr) {
+                if (statusTxt == "success") {
+                    $(".modal-content").html(responseTxt);
+                }
+                if (statusTxt == "error")
+                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+            SyntaxHighlighter.highlight();
+            $("#myModal").modal('show');
         });
     </script>
 
+    @*<script>
+            $("#collapse3ex1").click(function () {
+                SyntaxHighlighter.highlight();
+            });
+        </script>*@
+    <script>
+                                        //SyntaxHighlighter.all()
+    </script>
 </body>
 </html>
