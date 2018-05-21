@@ -1,327 +1,412 @@
 ﻿
-<div class="row">
-    <div class="col-xs-2">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a data-toggle="pill" href="#ex1">Math Problems</a></li>
-            <li><a data-toggle="pill" href="#ex2">Factorial</a></li>
-            <li><a data-toggle="pill" href="#ex3">Fizz-Buzz</a></li>
-            <li><a data-toggle="pill" href="#ex4">Palindrome</a></li>
-        </ul>
-    </div>
-    <div class="col-xs-10">
-        <div class="tab-content">
-            <div id="ex1" class="tab-pane fade in active">
-                <div class="container">
-                    <div class="col-sm-12">
-                        <h3>Math Problems</h3>
-                        <div class="panel-group" id="accordion1">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1ex1">
-                                            The Question?
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse1ex1" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        This program will ask the user for 5 numbers, then it will perform the following arithmetic functions:
-                                        <ol>
-                                            <li>Determine the sum of all the numbers</li>
-                                            <li>Determine which number is the least</li>
-                                            <li>Determine which number is the greatest</li>
-                                            <li>Determine the mean of the numbers </li>
-                                            <li>Determine the product of all the numbers</li>
-                                        </ol>
+<link href="Content/JSExerciseStyle.css" rel="stylesheet" />
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title" align="center">JavaScript Exercises:</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a data-toggle="pill" href="#ex1">Math Problems</a></li>
+                <li><a data-toggle="pill" href="#ex2">Factorial</a></li>
+                <li><a data-toggle="pill" href="#ex3">Fizz-Buzz</a></li>
+                <li><a data-toggle="pill" href="#ex4">Palindrome</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-10">
+            <div class="tab-content">
+                <div id="ex1" class="tab-pane fade in active">
+                    <div class="container">
+                        <div class="col-sm-12">
+                            <h3>Math Problems</h3>
+                            <div class="panel-group" id="accordion1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1ex1">
+                                                The Question?
+                                            </a>
+                                        </h4>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2ex1">
-                                            The Answer!
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse2ex1" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-xs-8">
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter number 1:</div>
-                                                    <div class="col-xs-2"><input id="ex1num1" type="number" placeholder="  Enter a Number" class="number"/></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter number 2:</div>
-                                                    <div class="col-xs-2"><input id="ex1num2" type="number" placeholder="  Enter a Number" class="number"/></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter number 3:</div>
-                                                    <div class="col-xs-2"><input id="ex1num3" type="number" placeholder="  Enter a Number" class="number"/></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter number 4:</div>
-                                                    <div class="col-xs-2"><input id="ex1num4" type="number" placeholder="  Enter a Number" class="number"/></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter number 5:</div>
-                                                    <div class="col-xs-2"><input id="ex1num5" type="number" placeholder="  Enter a Number" class="number"/></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2">
-                                                <button class="btn btn-group-sm btn-primary" id="btnEx1">Click Here!!</button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-offset-4" id="ex1Out"></div>
-                                            <div class="col-xs-offset-4" id="ex1Out2"></div>
-                                            <div class="col-xs-offset-4" id="ex1Out3"></div>
-                                            <div class="col-xs-offset-4" id="ex1Out4"></div>
-                                            <div class="col-xs-offset-4" id="ex1Out5"></div>
+                                    <div id="collapse1ex1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            This program will ask the user for 5 numbers, then it will perform the following arithmetic functions:
+                                            <ol>
+                                                <li>Determine the sum of all the numbers</li>
+                                                <li>Determine which number is the least</li>
+                                                <li>Determine which number is the greatest</li>
+                                                <li>Determine the mean of the numbers </li>
+                                                <li>Determine the product of all the numbers</li>
+                                            </ol>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3ex1">
-                                            The Code!
-                                        </a>
-                                    </h4>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2ex1">
+                                                The Answer!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2ex1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter number 1:</div>
+                                                        <div class="col-xs-2"><input id="ex1num1" type="number" placeholder="  Enter a Number" class="box" /></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter number 2:</div>
+                                                        <div class="col-xs-2"><input id="ex1num2" type="number" placeholder="  Enter a Number" class="box" /></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter number 3:</div>
+                                                        <div class="col-xs-2"><input id="ex1num3" type="number" placeholder="  Enter a Number" class="box" /></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter number 4:</div>
+                                                        <div class="col-xs-2"><input id="ex1num4" type="number" placeholder="  Enter a Number" class="box" /></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter number 5:</div>
+                                                        <div class="col-xs-2"><input id="ex1num5" type="number" placeholder="  Enter a Number" class="box" /></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2">
+                                                    <button class="btn btn-group-sm btn-primary" id="btnEx1">Click Here!</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-offset-4" id="ex1Out"></div>
+                                                <div class="col-xs-offset-4" id="ex1Out2"></div>
+                                                <div class="col-xs-offset-4" id="ex1Out3"></div>
+                                                <div class="col-xs-offset-4" id="ex1Out4"></div>
+                                                <div class="col-xs-offset-4" id="ex1Out5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="collapse3ex1" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Put code here!
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3ex1">
+                                                The Code!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3ex1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <pre class="brush: js">
+                                                        $("#btnEx1").click(function () {
+
+                                                            var num1 = Number($('#ex1num1').val());
+                                                            var num2 = Number($('#ex1num2').val());
+                                                            var num3 = Number($('#ex1num3').val());
+                                                            var num4 = Number($('#ex1num4').val());
+                                                            var num5 = Number($('#ex1num5').val());
+
+                                                            var sum = num1 + num2 + num3 + num4 + num5;
+                                                            var max = Math.max(num1, num2, num3, num4, num5);
+                                                            var min = Math.min(num1, num2, num3, num4, num5);
+                                                            var mean = num1 + num2 + num3 + num4 + num5 / 5;
+                                                            var product = num1 * num2 * num3 * num4 * num5;
+
+                                                            $('#ex1Out').text("1) Sum: " + sum);
+                                                            $('#ex1Out2').text("2) Largest Number: " + max);
+                                                            $('#ex1Out3').text("3) Smallest Number: " + min);
+                                                            $('#ex1Out4').text("4) Mean: " + mean);
+                                                            $('#ex1Out5').text("5) Product:" + product);
+
+                                                        });
+                                              </pre>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="ex2" class="tab-pane fade">
-                <div class="container">
-                    <div class="col-xs-12">
-                        <h3>Factorial</h3>
-                        <div class="panel-group" id="accordion2">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1ex2">
-                                            The Question?
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse1ex2" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        This program will ask the user to enter a number, then it will return the factorial of that number.
+                <div id="ex2" class="tab-pane fade">
+                    <div class="container">
+                        <div class="col-xs-12">
+                            <h3>Factorial</h3>
+                            <div class="panel-group" id="accordion2">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1ex2">
+                                                The Question?
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1ex2" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            This program will ask the user to enter a number, then it will return the factorial of that number.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2ex2">
-                                            The Answer!
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse2ex2" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-xs-8">
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter a number:</div>
-                                                    <div class="col--2">
-                                                        <input id="ex2num1" type="number" placeholder="  Enter a Number" min="0" class="negative" />
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2ex2">
+                                                The Answer!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2ex2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter a number:</div>
+                                                        <div class="col--2">
+                                                            <input id="ex2num1" type="number" placeholder="  Enter a Number" min="0" class="box" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-md btn-primary" id="btnEx2">Click Here!</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-1">
-                                                <div class="row">
-                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx2">I want!</button>
-                                                </div>
+                                            <div clss="row">
+                                                <div class="col-xs-offset-4" id="ex2Out"></div>
                                             </div>
-                                        </div>
-                                        <div clss="row">
-                                            <div class="col-xs-offset-4" id="ex2Out"></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3ex2">
-                                            The Code!
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse3ex2" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Put code here!
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3ex2">
+                                                The Code!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3ex2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <pre class="brush: js">
+                                            $('#btnEx2').click(function () {
+
+                                                var value = Number($('#ex2num1').val());
+
+                                                tempvalue = 1;
+                                                for (i = value; i > 0; i--) {
+                                                    tempvalue *= i;
+                                                }
+
+                                                $('#ex2Out').text(value + " Factorial is: " + tempvalue);
+                                            });
+                                        </pre>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="ex3" class="tab-pane fade">
-                <div class="container">
-                    <div class="col-sm-12">
-                        <h3>Fizz-Buzz</h3>
-                        <div class="panel-group" id="accordion3">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse1ex3">
-                                            The Question?
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse1ex3" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        This function will ask the user to input 2 numbers between 1 and 100. Then it will populate a list of all numbers between 1 and 100,
-                                        with any number being a product of the first number given saying "Fizz" instead of the number, any number being a product of the second number given saying "Buzz" instead of the number,
-                                        and any number being a product of both the first and second numbers given will say "Fizz-Buzz" instead of the number.
+                <div id="ex3" class="tab-pane fade">
+                    <div class="container">
+                        <div class="col-sm-12">
+                            <h3>Fizz-Buzz</h3>
+                            <div class="panel-group" id="accordion3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapse1ex3">
+                                                The Question?
+                                            </a>
+                                        </h4>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse2ex3">
-                                            The Answer!
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse2ex3" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-xs-8">
-                                                <div class="row">
-                                                    <div class="col-xs-6">Enter a number 1:</div>
-                                                    <div class="col-xs-2">
-                                                        <input id="ex3num1" type="number" min="1" max="100" placeholder="1-100" class="negative"/>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-6">Enter a number 2:</div>
-                                                    <div class="col-xs-2">
-                                                        <input id="ex3num2" type="number" min="1" max="100" placeholder="1-100" class="negative" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-1">
-                                                <div class="row">
-                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx3">I am Button!!</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-offset-2">
-                                                <div class="col-md-10" id="ex3Out"></div>
-                                            </div>
+                                    <div id="collapse1ex3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            This function will ask the user to input 2 numbers between 1 and 100. Then it will populate a list of all numbers between 1 and 100,
+                                            with any number being a product of the first number given saying "Fizz" instead of the number, any number being a product of the second number given saying "Buzz" instead of the number,
+                                            and any number being a product of both the first and second numbers given will say "Fizz-Buzz" instead of the number.
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse3ex3">
-                                            The Code!
-                                        </a>
-                                    </h4>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapse2ex3">
+                                                The Answer!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2ex3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <div class="row">
+                                                        <div class="col-xs-6">Enter a number 1:</div>
+                                                        <div class="col-xs-2">
+                                                            <input id="ex3num1" type="number" min="1" max="100" placeholder="1-100" class="box" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-6">Enter a number 2:</div>
+                                                        <div class="col-xs-2">
+                                                            <input id="ex3num2" type="number" min="1" max="100" placeholder="1-100" class="box" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-md btn-primary" id="btnEx3">Click Here!</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-offset-2">
+                                                    <div class="col-md-10" id="ex3Out"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="collapse3ex3" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Put code here!
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapse3ex3">
+                                                The Code!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3ex3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <pre class="brush: js">
+                                        $('#btnEx3').click(function () {
+                                            var fizz = Number($('#ex3num1').val());
+                                            var buzz = Number($('#ex3num2').val());
+                                            var fizzbuzz = '';
+
+                                            for (var i = 1; i <= 100; i++) {
+                                                if (i % fizz === 0 && i % buzz === 0) {
+                                                    fizzbuzz = fizzbuzz + " Fizz-Buzz, ";
+                                                }
+                                                else if (i % fizz === 0) {
+                                                    fizzbuzz = fizzbuzz + " Fizz, ";
+                                                }
+                                                else if (i % buzz === 0) {
+                                                    fizzbuzz = fizzbuzz + " Buzz, ";
+                                                }
+                                                else {
+                                                    fizzbuzz = fizzbuzz + i + ", ";
+                                                }
+                                                var fb = fizzbuzz;
+                                                fb = fb.slice(0, -2);
+                                                $('#ex3Out').text(fb);
+                                            }                                     
+                                        </pre>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="ex4" class="tab-pane fade">
-                <div class="container">
-                    <div class="col-sm-12">
-                        <h3>Palindrome</h3>
-                        <div class="panel-group" id="accordion4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse1ex4">
-                                            The Question?
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse1ex4" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        This function will ask the user for a word or phrase and then will tell the user if the word or phrase is a palindrome.
-                                        A palindrome is a word or phrase that is the same backwards as it is forwards.
+                <div id="ex4" class="tab-pane fade">
+                    <div class="container">
+                        <div class="col-sm-12">
+                            <h3>Palindrome</h3>
+                            <div class="panel-group" id="accordion4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion4" href="#collapse1ex4">
+                                                The Question?
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1ex4" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            This function will ask the user for a word or phrase and then will tell the user if the word or phrase is a palindrome.
+                                            A palindrome is a word or phrase that is the same backwards as it is forwards.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse2ex4">
-                                            The Answer!
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse2ex4" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-xs-8">
-                                                <div class="row">
-                                                    <div class="col-xs-5">Enter a word:</div>
-                                                    <div class="col-xs-5">
-                                                        <input id="ex4word" type="text" placeholder="  Enter a Word" />
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion4" href="#collapse2ex4">
+                                                The Answer!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2ex4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Enter a word:</div>
+                                                        <div class="col-xs-5">
+                                                            <input id="ex4word" type="text" placeholder="  Enter a Word" class="box" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-3">
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-md btn-primary" id="btnEx4">Click Here!</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-3">
-                                                <div class="row">
-                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx4">I need your touch!</button>
+                                            <div class="row">
+                                                <div class="col-xs-offset-4">
+                                                    <div class="row" id="ex4Out"></div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-offset-4">
-                                                <div class="row" id="ex4Out"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse3ex4">
-                                            The Code!
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse3ex4" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Put code here!
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion4" href="#collapse3ex4">
+                                                The Code!
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3ex4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <pre type="syntaxhighlighter" class="brush: js;  html-script: true">
+                                            $('#btnEx4').click(function () {
+
+                                                var palindrome = $('#ex4word').val();
+
+                                                palindrome = palindrome.replace(/\s/g, '');
+
+                                                var test = palindrome.split('');
+                                                var test2 = test.reverse();
+                                                test2 = test2.join('').toLowerCase();
+                                                palindrome = palindrome.toLowerCase();
+
+                                                if (test2 === palindrome) {
+                                                    $('#ex4Out').text("This word is a Palindrome");
+                                                }
+                                                else {
+                                                    $('#ex4Out').text("These word is NOT a Palindrome");
+                                                }
+                                            });
+                                        </pre>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<script src="/Scripts/JSExercise.js"></script>
+
+<script src="Scripts/JSExercise.js"></script>

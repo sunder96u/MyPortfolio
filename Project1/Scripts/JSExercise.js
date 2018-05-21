@@ -21,18 +21,7 @@
         $('#ex1Out5').text("5) Product:" + product);
 
     });
-    // Select your input element.
-    var numInput = document.querySelector('input');
 
-    // Listen for input event on numInput.
-    numInput.addEventListener('input', function () {
-        // Let's match only digits.
-        var num = this.value.match(/^\d+$/);
-        if (num === null) {
-            // If we have no match, value will be empty.
-            this.value = "";
-        }
-    }, false);
 
     //Exercise 2 button click (Factorial)
     $('#btnEx2').click(function () {
@@ -59,15 +48,15 @@
         for (var i = 1; i <= 100; i++) {
             if (i % fizz === 0 && i % buzz === 0) {
                 //Look for the condition fizz and buzz together, a multiple of fizz and buzz together
-                fizzbuzz = fizzbuzz + " Fizz-Buzz, ";
+                fizzbuzz = fizzbuzz + "Fizz-Buzz, ";
             }
             else if (i % fizz === 0) {
                 //Look for the condition of fizz, a multiple of the first number selected
-                fizzbuzz = fizzbuzz + " Fizz, ";
+                fizzbuzz = fizzbuzz + "Fizz, ";
             }
             else if (i % buzz === 0) {
                 //Look for the condition of buzz, a multiple of the second number selected
-                fizzbuzz = fizzbuzz + " Buzz, ";
+                fizzbuzz = fizzbuzz + "Buzz, ";
             }
             else {
                 fizzbuzz = fizzbuzz + i + ", ";

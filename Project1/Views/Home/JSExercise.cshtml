@@ -3,11 +3,13 @@
     ViewBag.Title = "JS Exercise";
 }
 
+<link href="/Content/JSExerciseStyle.css" rel="stylesheet" />
+
 <h2>JS Exercise</h2>
 
 
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JS Exercise 1</button>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JS Exercises</button>
 
 @*Exercise 1*@
 <!-- Modal -->
@@ -71,27 +73,27 @@
                                                             <div class="col-xs-8">
                                                                 <div class="row">
                                                                     <div class="col-xs-5">Enter number 1:</div>
-                                                                    <div class="col-xs-2"><input id="ex1num1" type="number" placeholder="  Enter a Number" /></div>
+                                                                    <div class="col-xs-2"><input id="ex1num1" type="number" placeholder="  Enter a Number" class="box"/></div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-xs-5">Enter number 2:</div>
-                                                                    <div class="col-xs-2"><input id="ex1num2" type="number" placeholder="  Enter a Number" /></div>
+                                                                    <div class="col-xs-2"><input id="ex1num2" type="number" placeholder="  Enter a Number" class="box"/></div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-xs-5">Enter number 3:</div>
-                                                                    <div class="col-xs-2"><input id="ex1num3" type="number" placeholder="  Enter a Number" /></div>
+                                                                    <div class="col-xs-2"><input id="ex1num3" type="number" placeholder="  Enter a Number" class="box" /></div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-xs-5">Enter number 4:</div>
-                                                                    <div class="col-xs-2"><input id="ex1num4" type="number" placeholder="  Enter a Number" /></div>
+                                                                    <div class="col-xs-2"><input id="ex1num4" type="number" placeholder="  Enter a Number" class="box"/></div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-xs-5">Enter number 5:</div>
-                                                                    <div class="col-xs-2"><input id="ex1num5" type="number" placeholder="  Enter a Number" /></div>
+                                                                    <div class="col-xs-2"><input id="ex1num5" type="number" placeholder="  Enter a Number" class="box"/></div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xs-2">
-                                                                <button class="btn btn-group-sm btn-primary" id="btnEx1">Click Here!!</button>
+                                                                <button class="btn btn-group-sm btn-primary" id="btnEx1">Click Here!</button>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -114,7 +116,29 @@
                                                 </div>
                                                 <div id="collapse3ex1" class="panel-collapse collapse">
                                                     <div class="panel-body">
-                                                        Put code here!
+                                                        <pre class="brush: js">
+                                            $("#btnEx1").click(function () {
+
+                                                var num1 = Number($('#ex1num1').val());
+                                                var num2 = Number($('#ex1num2').val());
+                                                var num3 = Number($('#ex1num3').val());
+                                                var num4 = Number($('#ex1num4').val());
+                                                var num5 = Number($('#ex1num5').val());
+
+                                                var sum = num1 + num2 + num3 + num4 + num5;
+                                                var max = Math.max(num1, num2, num3, num4, num5);
+                                                var min = Math.min(num1, num2, num3, num4, num5);
+                                                var mean = num1 + num2 + num3 + num4 + num5 / 5;
+                                                var product = num1 * num2 * num3 * num4 * num5;
+
+                                                $('#ex1Out').text("1) Sum: " + sum);
+                                                $('#ex1Out2').text("2) Largest Number: " + max);
+                                                $('#ex1Out3').text("3) Smallest Number: " + min);
+                                                $('#ex1Out4').text("4) Mean: " + mean);
+                                                $('#ex1Out5').text("5) Product:" + product);
+
+                                            });
+                                        </pre>
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,13 +180,13 @@
                                                                 <div class="row">
                                                                     <div class="col-md-5">Enter a number:</div>
                                                                     <div class="col-md-2">
-                                                                        <input id="ex2num1" type="number" placeholder="  Enter a Number" />
+                                                                        <input id="ex2num1" type="number" placeholder="  Enter a Number" class="box"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <div class="row">
-                                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx2">I want!</button>
+                                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx2">Click Here!</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -182,7 +206,19 @@
                                                 </div>
                                                 <div id="collapse3ex2" class="panel-collapse collapse">
                                                     <div class="panel-body">
-                                                        Put code here!
+                                                        <pre class="brush: js">
+                                            $('#btnEx2').click(function () {
+
+                                                var value = Number($('#ex2num1').val());
+
+                                                tempvalue = 1;
+                                                for (i = value; i > 0; i--) {
+                                                    tempvalue *= i;
+                                                }
+
+                                                $('#ex2Out').text(value + " Factorial is: " + tempvalue);
+                                            });
+                                        </pre>
                                                     </div>
                                                 </div>
                                             </div>
@@ -226,19 +262,19 @@
                                                                 <div class="row">
                                                                     <div class="col-md-5">Enter a number 1:</div>
                                                                     <div class="col-md-2">
-                                                                        <input id="ex3num1" type="number" min="1" max="100" placeholder="1-100" />
+                                                                        <input id="ex3num1" type="number" min="1" max="100" placeholder="1-100" class="box"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-5">Enter a number 2:</div>
                                                                     <div class="col-md-2">
-                                                                        <input id="ex3num2" type="number" min="1" max="100" placeholder="1-100" />
+                                                                        <input id="ex3num2" type="number" min="1" max="100" placeholder="1-100" class="box"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <div class="row">
-                                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx3">I am Button!!</button>
+                                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx3">Click Here!</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -260,7 +296,30 @@
                                                 </div>
                                                 <div id="collapse3ex3" class="panel-collapse collapse">
                                                     <div class="panel-body">
-                                                        Put code here!
+                                                        <pre class="brush: js">
+                                        $('#btnEx3').click(function () {
+                                            var fizz = Number($('#ex3num1').val());
+                                            var buzz = Number($('#ex3num2').val());
+                                            var fizzbuzz = '';
+
+                                            for (var i = 1; i <= 100; i++) {
+                                                if (i % fizz === 0 && i % buzz === 0) {
+                                                    fizzbuzz = fizzbuzz + " Fizz-Buzz, ";
+                                                }
+                                                else if (i % fizz === 0) {
+                                                    fizzbuzz = fizzbuzz + " Fizz, ";
+                                                }
+                                                else if (i % buzz === 0) {
+                                                    fizzbuzz = fizzbuzz + " Buzz, ";
+                                                }
+                                                else {
+                                                    fizzbuzz = fizzbuzz + i + ", ";
+                                                }
+                                                var fb = fizzbuzz;
+                                                fb = fb.slice(0, -2);
+                                                $('#ex3Out').text(fb);
+                                            }                                     
+                                        </pre>
                                                     </div>
                                                 </div>
                                             </div>
@@ -303,13 +362,13 @@
                                                                 <div class="row">
                                                                     <div class="col-md-4">Enter a word:</div>
                                                                     <div class="col-md-5">
-                                                                        <input id="ex4word" type="text" placeholder="  Enter a Word" />
+                                                                        <input id="ex4word" type="text" placeholder="  Enter a Word" class="box"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <div class="row">
-                                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx4">I need your touch!</button>
+                                                                    <button type="button" class="btn btn-md btn-primary" id="btnEx4">Click Here!</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -331,7 +390,26 @@
                                                 </div>
                                                 <div id="collapse3ex4" class="panel-collapse collapse">
                                                     <div class="panel-body">
-                                                        Put code here!
+                                                        <pre class="brush: js">
+                                            $('#btnEx4').click(function () {
+
+                                                var palindrome = $('#ex4word').val();
+
+                                                palindrome = palindrome.replace(/\s/g, '');
+
+                                                var test = palindrome.split('');
+                                                var test2 = test.reverse();
+                                                test2 = test2.join('').toLowerCase();
+                                                palindrome = palindrome.toLowerCase();
+
+                                                if (test2 === palindrome) {
+                                                    $('#ex4Out').text("This word is a Palindrome");
+                                                }
+                                                else {
+                                                    $('#ex4Out').text("These word is NOT a Palindrome");
+                                                }
+                                            });
+                                        </pre>
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,4 +430,5 @@
 
 @section scripts{
     <script src="~/Scripts/JSExercise.js"></script>
+
 }
