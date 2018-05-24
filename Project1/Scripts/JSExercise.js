@@ -11,7 +11,7 @@
         var sum = num1 + num2 + num3 + num4 + num5;
         var max = Math.max(num1, num2, num3, num4, num5);
         var min = Math.min(num1, num2, num3, num4, num5);
-        var mean = ((num1 + num2 + num3 + num4 + num5) / 5);
+        var mean = (num1 + num2 + num3 + num4 + num5) / 5;
         var product = num1 * num2 * num3 * num4 * num5;
         //Output a result to the results area
         $('#ex1Out').text("1) Sum: " + sum);
@@ -45,19 +45,19 @@
 
         if (fizz < 1) {
             fizz = 1;
-            alert("Value less than 1, please try again.")
+            alert("Value less than 1, please try again.");
         }
         else if (fizz > 100) {
             fizz = 100;
-            alert("Value greater than 100, please try again.")
+            alert("Value greater than 100, please try again.");
         }
         else if (buzz < 1) {
             buzz = 1;
-            alert("Value less than 1, please try again.")
+            alert("Value less than 1, please try again.");
         }
         else if (buzz > 100) {
             buzz = 100;
-            alert("Value greater than 100, please try again.")
+            alert("Value greater than 100, please try again.");
         }
         //This is where the magic happens!
         //output results straight from the for/if loops
@@ -192,4 +192,8 @@
             return false;
         }
     };
+
+    $(".modal-header").load(function () {
+            SyntaxHighlighter.highlight();
+    });
 });

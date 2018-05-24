@@ -385,7 +385,7 @@
                                 <figure>
                                     <div class="hovereffect">
                                         <img class="img-responsive" src="~/Template1/images/JavaScript.jpg" alt="">
-                                        <a @*href="~/JSModal.html"*@ class="js-modal">
+                                        <a href="~/JSModal.html" class="js-modal">
                                             <div class="overlay">
                                                 <div class="hovereffect-title">
                                                     <h6>JavaScript Exercises</h6>
@@ -730,12 +730,13 @@
 
     <!-- / hide nav -->
     <!-- / javascript -->
-    @*<script>
-            $('.js-modal').on('click', function (e) {
-                e.preventDefault();
-                $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
-            });
-        </script>*@
+    <script>
+        $('.js-modal').on('click', function (e) {
+            e.preventDefault();
+            $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
+        });
+    </script>
+    <script src="~/Scripts/JSExercise.js"></script>
 
     @*<script>
             $(".js-modal").click(function () {
@@ -745,27 +746,10 @@
                 })
             })
         </script>*@
-    <script>
-        $(".js-modal").click(function () {
-            $(".modal-content").load("../JSModal.html", function (responseTxt, statusTxt, xhr) {
-                if (statusTxt == "success") {
-                    $(".modal-content").html(responseTxt);
-                }
-                if (statusTxt == "error")
-                    alert("Error: " + xhr.status + ": " + xhr.statusText);
-            });
-            SyntaxHighlighter.highlight();
-            $("#myModal").modal('show');
-        });
-    </script>
 
     @*<script>
-            $("#collapse3ex1").click(function () {
-                SyntaxHighlighter.highlight();
-            });
-        </script>*@
-    <script>
-                                        //SyntaxHighlighter.all()
-    </script>
+          SyntaxHighlighter.all()
+    </script>*@
+
 </body>
 </html>
