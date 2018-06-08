@@ -271,13 +271,19 @@
     <Content Include="Template1\documentation\js\prettify\prettify.js" />
     <Content Include="Template1\fonts\fontawesome-webfont.svg" />
     <Content Include="Template1\fonts\Linearicons-Free.svg" />
+    <Content Include="Template1\images\51561b7cd55fc0c4c0dc4548250d4ca1.png" />
+    <Content Include="Template1\images\bootstrap.png" />
     <Content Include="Template1\images\eng.png" />
     <Content Include="Template1\images\favicon.png" />
     <Content Include="Template1\images\fr.png" />
+    <Content Include="Template1\images\Git-Logo-2Color.png" />
     <Content Include="Template1\images\header-bg.jpg" />
+    <Content Include="Template1\images\html5css3__024276400_1034_29082016.png" />
     <Content Include="Template1\images\JavaScript.jpg" />
     <Content Include="Template1\images\Me1.jpg" />
+    <Content Include="Template1\images\ms-icon-310x310.png" />
     <Content Include="Template1\images\my-img.png" />
+    <Content Include="Template1\images\NET-1024x576.png" />
     <Content Include="Template1\images\post.jpg" />
     <Content Include="Template1\images\post1.jpg" />
     <Content Include="Template1\images\post2.jpg" />
@@ -299,6 +305,7 @@
     <Content Include="Template1\images\single-post.jpg" />
     <Content Include="Template1\images\single-project.jpg" />
     <Content Include="Template1\images\sp.png" />
+    <Content Include="Template1\images\xamarin-logo.png" />
     <Content Include="Template1\index-icon-nav.html" />
     <Content Include="Template1\index-top-nav.html" />
     <Content Include="Template1\index.html" />
@@ -317,7 +324,9 @@
     <Content Include="Template1\single-post.html" />
     <Content Include="Template1\single-project.html" />
     <Content Include="JSModal.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

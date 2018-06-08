@@ -22,6 +22,9 @@
 
     });
 
+    $('.panel').click(function () {
+        SyntaxHighlighter.highlight();
+    })
 
     //Exercise 2 button click (Factorial)
     $('#btnEx2').click(function () {
@@ -192,8 +195,4 @@
             return false;
         }
     };
-
-    $(".modal-header").load(function () {
-            SyntaxHighlighter.highlight();
-    });
 });
